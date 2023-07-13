@@ -81,7 +81,7 @@ int main()
     m = binary_exp(m, (p - 1) >> 2, p);
 
     int64_t a = p, b = 2 * m, c = (m * m + 1) / p;
-    assert(b * b - ((a * c) << 2) < 0);
+    assert(a > 0 && b * b - ((a * c) << 2) < 0);
     Matrix<int64_t, 2, 2> M = make_identity<int64_t, 2>(), N = make_identity<int64_t, 2>();
 
     Matrix<int64_t, 2, 2> shear, shear_inv, rotation, rotation_inv;
